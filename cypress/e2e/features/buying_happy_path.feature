@@ -1,4 +1,4 @@
-@e2e_buying @regression
+@e2e_buying @smoke @regression
 Feature: Buying iMac
     user wants to buy the product imac
     
