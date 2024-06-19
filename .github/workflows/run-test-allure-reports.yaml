@@ -1,0 +1,16 @@
+name: run-cypress-tests-reporting
+on: [workflow_dispatch]
+jobs:
+  run-cypress-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.5
+      - name: Install project dependencies
+        run: npm install
+      - name: Run cypress tests
+        run: npx cypress run
+      - name: Generate test artifacts
+        uses: actions/upload-artifact@v4
+      - name: Serve Allure report
+        run: npx allure serve allure-results
