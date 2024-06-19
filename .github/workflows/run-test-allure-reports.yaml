@@ -1,4 +1,4 @@
-name: run-cypress-tests-reporting
+name: run-cypress-tests-allure
 on: [workflow_dispatch]
 jobs:
   run-cypress-tests:
